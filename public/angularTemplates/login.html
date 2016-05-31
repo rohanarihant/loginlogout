@@ -1,0 +1,50 @@
+<style>
+.error{
+    background:#ffecec url('images/error.png')  no-repeat 1px 50%;
+      color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;
+    font-size:14px;
+    padding:5px 5px 5px 20px;
+    margin:10px;
+    border:1px solid #f5aca6;"
+}
+</style>
+    
+    <div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form name="loginform" ng-submit="logIn()" novalidate>
+            <fieldset>
+                <h2>Please Sign In</h2>
+                <hr class="colorgraph">
+                <div class="form-group">
+                     <input type="text" class="form-control" ng-model="user.username" name="username" required/>
+                            <div class="error-container" ng-messages="loginform.username.$error" ng-if="loginform.username.$touched">
+                                <div class="error" ng-message="required">Your username is required.</div>
+                            </div>
+                </div>
+                <div class="form-group">
+                   <input type="password" class="form-control" ng-model="user.password" name="password" required/>
+                            <div class="error-container" ng-messages="loginform.password.$error" ng-if="loginform.password.$touched">
+                                <div class="error" ng-message="required">Your password is required.</div>
+                            </div>
+                </div>
+                <span class="button-checkbox">
+                   <input type="checkbox"> Remember Me</input><p  data-color="info"></p>
+                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+                    <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+                </span>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="loginform.$invalid"> Log In</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+
+                        <a href="/register" class="btn btn-lg btn-primary btn-block">Register</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
