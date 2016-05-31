@@ -1,0 +1,73 @@
+   <style>
+.error{
+    background:#ffecec url('images/error.png')  no-repeat 1px 50%;
+      color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;
+    font-size:14px;
+    padding:5px 5px 5px 20px;
+    margin:10px;
+    border:1px solid #f5aca6;"
+}
+</style>
+    <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form name="registerform" ng-submit="register()" novalidate >
+            <h2>Please Sign Up <small>It's free and always will be.</small></h2>
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="form-group">
+                    <div class="form-group">
+                       <input type="email" class="form-control" ng-model="user.email" name="email" placeholder="E mail" required/>
+                            <div class="error-container" ng-messages="registerform.email.$error" ng-if="registerform.email.$touched">
+                                <div class="error" ng-message="required">Your Email is required.</div>
+                                <div class="error" ng-message="email">Not valid email!</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="user.username" name="username" placeholder="Username" required/>
+                            <div class="error-container" ng-messages="registerform.username.$error" ng-if="registerform.username.$touched">
+                                <div class="error" ng-message="required">Your username is required.</div>
+                            </div>
+                    </div>
+                </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-control" ng-model="user.password" name="password" placeholder="Password" required ng-minlength="6" />
+                            <div class="error-container" ng-messages="registerform.password.$error" ng-if="registerform.password.$touched">
+                                <div class="error" ng-message="required">Your password is required.</div>
+                                <div class="error" ng-message="minlength">Your password must be at least 6 characters long.</div>
+                            </div>
+            </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="password" class="form-control" ng-model="user.confirmpassword" name="confirmpassword" required confirm-pwd="user.password" placeholder="Confirm Password"/>
+                            <div class="error-container" ng-messages="registerform.confirmpassword.$error" ng-if="registerform.confirmpassword.$touched">
+                                <div class="error" ng-message="required">You must confirm your password.</div>
+                                <div class="error" ng-message="password">You must confirm your password.</div>
+                            </div>
+                    </div>
+                </div>
+              
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                    <span class="button-checkbox">
+                        <input type="checkbox" data-color="info" tabindex="7">I Agree</input>
+                   
+                    </span>
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-9">
+                     By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+                </div>
+            </div>
+            
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="col-xs-12 col-md-6"><button class="btn btn-success btn-block btn-lg" type="submit" ng-disabled="registerform.$invalid"><i class="fa fa-plus-circle"></i> Register</button></div>
+                <div class="col-xs-12 col-md-6"><a href="/login" class="btn btn-success btn-block btn-lg">Login</a></div>
+            </div>
+        </form>
+    </div>
+</div>
