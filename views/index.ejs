@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="forum-app">
+    <head>
+        <% include ../views/partials/head %>
+        <base href="/">
+    </head>
+    <body id="application">
+ <% include ../views/partials/header %>
+
+    
+        <div>  
+            
+            <ui-view></ui-view>
+        </div>
+   <!-- end wrap -->
+    <% include ../views/partials/footer %>
+    
+
+   <!--  <link href="/stylesheets/nav.css" rel="stylesheet" /> -->
+    <link href="/stylesheets/new_header.css" rel="stylesheet" />
+     <link href="/stylesheets/signup.css" rel="stylesheet" />
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+ 
+    <script src="/javascripts/angular.min.js"></script>
+    <script src="/components/angular-messages/angular-messages.min.js"></script>
+    
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+        <script src="/components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
+    
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/lib/services.js"></script>
+    <script src="/javascripts/lib/filters.js"></script>
+    <script src="/javascripts/lib/modules.js"></script>
+    <script src="/javascripts/controllers/navbar.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    
+    <script src="/javascripts/controllers/auth.js"></script>
+    <script src="/javascripts/controllers/user-profile.js"></script>
+  </body>
+</html>
