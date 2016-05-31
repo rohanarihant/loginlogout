@@ -1,0 +1,122 @@
+
+<header id="header" ng-controller="NavCtrl"> 
+          <div class="col-md-3 col-xs-3" id="logo">
+            <a href="">
+                            <img src="images/logo.png">
+                          </a>
+          </div><!-- logo -->
+          <div class="col-md-9 col-xs-9">
+                                    <div class="header-menu">
+                            <ul>
+                                <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12 current_page_item menu-item-20 active "><a href="">Home</a></li>
+<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-114"><i class="fa fa-eye"></i><a href="">About us</a>
+
+
+
+</li>-->
+
+<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866" ng-if="!isLoggedIn()" ng-class="{ active: isCurrentPath('/login') }">
+                        <span>
+                            <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
+                        </span>
+                    </li>
+
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21" ng-if="!isLoggedIn()" ng-class="{ active: isCurrentPath('/register') }">    
+                        <span>
+                            <a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+                        </span>
+                    </li>
+
+ <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25" ng-if="isLoggedIn()">
+                        <span>
+                            <a ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+                        </span>
+                    </li>
+                    <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26" ng-if="isLoggedIn()">
+                        <span>
+                            <a href="/user-profile/{{currentUser() }}"><i class="fa fa-user" aria-hidden="true"></i> {{currentUser() }}</a>
+                        </span>
+                    </li>
+
+
+
+
+
+<!--<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a href="">Blog</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="">Term</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="">Contact</a></li>-->
+                            </ul>
+                        </div><!-- menu -->
+                                                <div class="header-search-wrapper">
+                          <!-- <section class="buttonset">
+                                <button id="showLeftPush"><i class="fa fa-question"></i></button>
+                                <button id="showRightPush"><i class="fa fa-bar-chart-o"></i></button>
+                            </section> -->
+                                                      <form id="header_search" method="GET" action="" class="disable-mobile">
+                                <input type="text" name="keyword" value="" placeholder="Enter Keywords" autocomplete="off">
+                                <i class="fa fa-search"></i>
+                                <div id="search_preview" class="search-preview empty"></div>
+                            </form>
+                        </div><!-- search -->
+          </div>
+          <!--<div class="col-md-2 col-xs-2 btn-group header-avatar ">
+                                  <span class="expand dropdown-toggle" type="span" data-toggle="dropdown">
+              <a href="javascript:void(0)" class="dropdown-account ">
+                                <span class="avatar"><img itemprop="image" src="images/logo.png" class="avatar" alt=""></span>
+                                <span class="display_name">Mobilyte Admin Demo</span>
+                                <span class="icon-down"><i class="fa fa-chevron-circle-down"></i></span>
+                          </a>
+            </span>
+            <ul class="dropdown-menu dropdown-profile">
+              <li>
+                <a href="">
+                  <i class="fa fa-user"></i> User Profile </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="open-edit-profile edit_profile">
+                  <i class="fa fa-cog"></i> User Settings </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <i class="fa fa-power-off"></i> Log out </a>
+              </li>
+              
+              <li>
+              <a class="login-url" href="" data-toggle="modal" data-target="#login_register">
+              Login or Register</a>
+               
+              </li>
+            </ul>
+
+                      </div>-->
+        </header>
+
+
+
+
+
+
+
+      <!--<ul auto-active>
+                    <li ng-if="!isLoggedIn()" ng-class="{ active: isCurrentPath('/login') }">
+                        <span>
+                            <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
+                        </span>
+                    </li>
+                    <li ng-if="!isLoggedIn()" ng-class="{ active: isCurrentPath('/register') }">    
+                        <span>
+                            <a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+                        </span>
+                    </li>
+                    <li ng-if="isLoggedIn()">
+                        <span>
+                            <a ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+                        </span>
+                    </li>
+                    <li ng-if="isLoggedIn()">
+                        <span>
+                            <a href="/user-profile/{{currentUser() }}"><i class="fa fa-user" aria-hidden="true"></i> {{currentUser() }}</a>
+                        </span>
+                    </li>
+                </ul>-->
