@@ -1,0 +1,135 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+/*Standard Elements*/
+html, body { height: 100%;}
+body{font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; padding-top:0px;}
+#wrap { min-height: 100%;}
+#main { overflow:auto; padding-bottom:100px; /* this needs to be bigger than footer height*/}
+#footer {padding:20px 0px; background-color: #077CB6; color:#fff;}
+.footer {position: relative; margin-top: 90px; /* negative value of footer height */ height: 60px; clear:both; padding-top:20px;} 
+
+/*Navbar Customization*/
+.navbar-default{background:#077CB6;}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {color:#fff; text-decoration: none;}
+#mainmenu .navbar-nav>li>a{transition: all .3s; color:#efefef;}
+#mainmenu .navbar-nav>li>a:hover{background:#fff; color:#000;}
+#mainmenu .navbar-nav>li.active>a{background:#fff; color:#000;}
+#mainmenu .navbar-nav .form-control{border:1px solid #065C87;}
+
+.navbar-default .navbar-toggle{border-color: #065C87;}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{background:#065C87; border-color: #065C87;}
+.navbar-default .navbar-toggle .icon-bar{background-color:#fff;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{}
+h1.page-title{font-size:25px; text-transform: capitalize;}
+h1.page-title a{color:#000;}
+.navbar-collapse{padding:0px;}
+
+/*Helper Classes*/
+.add-margin-bottom{margin-bottom:10px;}
+.add-top-bottom{margin-top:10px;}
+
+/* View Table Styles */
+.table-heading{background:#D8EDF6; border:1px solid #BDDDEB; border-right:0px;}
+.table-heading:last-child{border-right:1px solid #BDDDEB; text-align: right;}
+.table-heading p{ margin:0px; padding-top: 10px; padding-bottom: 10px; cursor: pointer;}
+.table-heading .fa{color:#8DCBE6;}
+.table-heading span{float:right;}
+.table-wrap{padding:0px 15px;}
+
+.post-row{background: #F6F6F6; padding-top:10px; padding-bottom:10px; text-transform: capitalize;}
+.post-row:nth-child(even){background:#fff;}
+.post-row div:last-child{text-align: right;}
+.post-row div:first-child{text-align: left;}
+.post-row:nth-child(odd){}
+.post-row p{ padding:0px; margin:0px; }
+
+/*vote display*/
+.upvote-display{text-align: right;}
+.upvote-button, .downvote-button{display:inline-block; padding:5px; border:1px solid #dddddd; cursor: pointer;}
+.upvote-button:hover, .downvote-button:hover{background:#efefef;}
+
+
+/*View Single Post Styles*/
+.post-created-date{color:#bbb; font-size:11px;}
+.comment-container{border-top:1px solid #ddd; margin-top:25px; padding-top:25px;}
+.comment-block{margin-left:20px; padding-left:20px; border-left:3px solid #ddd; margin-bottom:20px;}
+.add-comment-form{margin:15px 0px 25px 0px;}
+.info-line{color:#bbb; font-size:11px; padding: 10px 0px;}
+.comment-field{margin-bottom:10px;}
+
+#recent-posts-feed{background: #efefef; border: 1px solid #dddddd; padding:20px;}
+#recent-posts-feed h4{padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #ddd;}
+.recent-post a{text-transform: capitalize;}
+
+/* Category Display Styles */
+p.category-description{font-size:12px; color:#666; padding-top:3px;}
+
+/* Button Styles */
+.btn-primary{background:#077CB6;}
+.button-container{margin-top:20px;}
+.upvote-button .fa, .downvote-button .fa{ color:#bbb; cursor:pointer;}
+.hide-message-btn{float:right; margin-top:-10px; background:#9FE39F;}
+.hide-message-btn .fa{color:#CBFCCB;}
+.warning .hide-message-btn{background: #F26E6E;}
+.warning .hide-message-btn .fa{ color: #FCD6D6;}
+.small-grey-button{padding:2px 4px; background: #ccc; display: inline-block;}
+
+
+#view-posts-display .btn.back-btn{float:right;}
+#view-posts-display .post-title{ margin-top:0px; }
+
+/* Utilities and Forms Styles */
+.user-message{background:#CBFCCB; border:1px solid #9FE39F; padding:15px; margin-bottom:20px;}
+.user-message.warning{background: #FCD6D6; border: 1px solid #F26E6E;}
+.user-message.note{background: #CBF1FC; border: 1px solid #9FD6E3;}
+.user-message.standard{background: #efefef; border: 1px solid #dddddd;}
+.user-message p{padding:0px; margin:0px;}
+.error-container{margin-top:5px;}
+.error-container p{display:inline-block; padding:4px; background: #F0F0B0;}
+.ng-invalid.ng-touched{background:#FCD6D6;}
+.text-counter{color:#bbb ; padding:10px 0px; float:right;}
+.text-counter .over-limit{color:#D96666}
+.value-changed{background:#F0F0B0;}
+.edited-marker{ font-size:11px; font-weight: normal; margin-left:5px;}
+.form-control[disabled], fieldset[disabled] .form-control{background:#F6F5F5;}
+.tag-post{display: inline-block; padding:3px; font-size:10px; background:#ddd; margin-left:10px;}
+
+
+/* Admin Toolbar */
+.admin-toolbar{background:#555; margin-bottom:10px;}
+.admin-toolbar a{text-decoration:none; color:#ccc; display: inline-block; padding:10px; float:right; border-left:1px solid #444; border-right:#666; transition: all .3s;}
+.admin-toolbar a:hover{color:#fff; background:#444;}
+.admin-toolbar a:active{background:#222;}
+
+.right{float:right;}
+.left{float:left;}
+
+/* User Bar */
+.user-menu{background:#E9E9E9; border-top:1px solid #F1F1F1; border-bottom:1px solid #F1F1F1;}
+.user-menu ul{padding:0px; margin: 0px; float:right; border-right:1px solid #ddd;}
+.user-menu ul li{list-style-type: none; float:right;}
+.user-menu ul li a{padding:5px 10px; display:inline-block; border-left:1px solid #ddd; color:#333; text-decoration: none; transition:all .3s;}
+.user-menu ul li a:hover{background:#fff; cursor:pointer;}
+.user-menu ul li.active a{background:#fff; cursor:pointer;}
+
+/*User Profile*/
+.user-profile-image img{max-width:100%;}
+
+@media (min-width: 768px){
+    #mainmenu .navbar-nav>li.active>a{background:#fff; color:#000;}
+}
+@media (max-width: 600px){
+    #mainmenu .navbar-nav>li.active>a, #mainmenu .navbar-nav>li>a{background:none; color:#fff; display:block;}
+    #mainmenu .navbar-nav>li>a:hover{background:none; color:#fff;}
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{border:none; margin-top:0px; margin-bottom:0px;}
+    nav .navbar-nav{margin:0px; background:#065C87;}
+    .navbar-form{margin:0px;}
+}
+.error{
+	background:#ffecec url('./images/error.png')  no-repeat 1px 50%;
+	 color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:14px;
+    padding:5px 5px 5px 20px;
+    margin:10px;
+    border:1px solid #f5aca6;
+}
