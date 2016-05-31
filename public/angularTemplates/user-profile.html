@@ -1,0 +1,85 @@
+	<!-- USER MESSAGE DISPLAY BLOCK -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="user-message" ng-show="userMessage !=''">
+                    <button class="btn hide-message-btn" ng-click="hideMessage()"><i class="fa fa-times"></i></button>
+                    <p>{{userMessage}}</p>
+                 </div>
+            </div>
+        </div>
+    </div> 
+    <!-- DISPLAY CATEGORIES TABLE HEADER AND CONTROLS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 user-profile-image">
+                <img ng-src="http://placehold.it/400x400?text={{user.username}}'s+profile+picture"/>
+            </div>
+            <div class="col-md-9 col-sm-9 user-profile-data">
+                <h1>Username: {{user.username}}</h1>
+                <p><strong>Account Created:</strong> {{user.accountcreated}}</p>
+                <p><strong>Last Active:</strong> {{user.recentactivity }}</p>
+                <p><strong>Discussions Posted:</strong> {{user.numposts}}</p>
+                <p><strong>Replies:</strong> {{user.numcomments}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+	    <div class="row">
+            <div class="col-md-12">
+                <h4>Recent Activity</h4>
+            </div>        
+        </div>
+    </div>
+    <div class="container" ng-if="user.posts.length == 0 && user.comments.length == 0">
+	    <div class="row">
+            <div class="col-md-12">
+                <div class="user-message standard">
+                    <p>No Activity</p>
+                 </div>
+            </div>        
+        </div>
+    </div>
+    <div class="container" ng-if="user.posts.length != 0">
+	    <div class="row">
+            <div class="col-md-12">
+                <h5>Posts ({{user.posts.length}})</h5>
+            </div>        
+        </div>
+    </div>
+        <!-- DISPLAY POSTS -->
+    <div class="container" ng-if="user.posts.length != 0">
+        <div class="table-wrap">
+            <div class="row post-row" ng-repeat="post in user.posts | orderBy: rowFilter">
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                    <p><span class="upvote-count">+{{post.upvotes}}</span>&nbsp;<span class="downvote-count">-{{post.downvotes}}</span>
+                    <a href="/view-post/{{post._id}}/{{post.title | slugify }}">{{post.title | cut:true:60: ' ...'}}</a><span ng-if="post.active == false" class="tag-post">Closed</span></p> 
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <p><span title="{{post.created | date:'MM-dd-yy @ h:mm a' }}">{{post.created}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="container" ng-if="user.comments.length != 0">
+	    <div class="row">
+            <div class="col-md-12">
+                <h5>Comments ({{user.comments.length}})</h5>
+            </div>        
+        </div>
+    </div>
+    <!-- DISPLAY COMMENTS -->
+    <div class="container" ng-if="user.comments.length != 0">
+        <div class="table-wrap">
+            <div class="row post-row" ng-repeat="comment in user.comments | orderBy: rowFilter">
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                    <p><span class="upvote-count">+{{comment.upvotes}}</span>&nbsp;<span class="downvote-count">-{{comment.downvotes}}</span>
+                    <a href="/view-post/{{comment.post}}/#{{comment._id}}">{{comment.body | cut:true:60: ' ...'}}</a><span ng-if="post.active == false" class="tag-post">Closed</span></p> 
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <p>{{comment.created}}</p>
+                </div>
+            </div>
+        </div>
+    </div>     
